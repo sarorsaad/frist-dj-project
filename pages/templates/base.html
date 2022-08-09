@@ -1,10 +1,6 @@
-<style>
-    body{
-        background:rgb(144, 148, 139);
-        
-        
-    }
-</style>
+{% load static %}
+<link rel="stylesheet" href="{ % static 'css/style.css'%}">
+
 {% include 'parts/navbar.html' %}
 {% block content  %}
 {% endblock content  %}
