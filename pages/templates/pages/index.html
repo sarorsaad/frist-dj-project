@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% block content   %}
+<h1>welcome to my pages index</h1>
+<h2>
+    variables and filters <br>
+name = {{name}} <br>
+name = {{name|capfirst}} <br>
+name = {{name|slice:':5'}} <br>
+name = {{name|length}} <br>
+name = {{name|add:'radiologist'}} <br>
+name = {{name|cut:'s'}} <br>
+
+age  = {{age}} <br>
+file  = {{file|filesizeformat}}
+</h2>
+<h3>
+  {tags }  <br> 
+</h3>
+
+{% if name == 'sarorsaad' %}
+<h3>welcome saror</h3>
+{% elif age == 40 %}
+<h3>nice</h3>
+{% endif %}
+
+{% for x in name  %}
+<h3>{{x}}</h3>
+
+{% endfor %}
+
+
+ {% endblock content   %}
